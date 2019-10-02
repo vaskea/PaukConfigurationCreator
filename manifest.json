@@ -1,0 +1,30 @@
+{
+    "name": "Pauk Configuration Creator",
+    "version": "1.0.0",
+    "description": "This will enable users to create configuration files for Pauk Crawling System by cliking on HTML elements",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["./vendor/jquery-3.3.1.slim.min.js", "background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "js": ["./vendor/jquery-3.3.1.slim.min.js", "content.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "bookmarks",
+        "storage"
+    ],
+    "icons": {
+        "16": "appIcon.png",
+        "48": "appIcon.png",
+        "128": "appIcon.png"
+    },
+    "browser_action": {
+        "default_title": "Created by Vasilije Abazovic",
+        "default_popup": "popup.html"
+    }
+}

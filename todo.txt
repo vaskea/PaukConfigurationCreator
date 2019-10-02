@@ -1,0 +1,38 @@
+2 tabs:
+THREADS				|		POSTS			|
+
+
+THREADS:
+threads: 
+{
+	selector: '',
+	schema: {
+		title: '',
+		url: '',
+		firstPostDate: '',
+		lastPostDate: '',
+		replies: ''
+	},
+	pagination: {
+		next: ''
+	}
+}
+
+
+POSTS:
+{
+	selector: '',
+	schema: {
+		author: '',
+		postbody: '',
+		postdate: '',
+		title: '',		
+		authorUrl: '',
+		avatarUrl: '',
+		html: '',
+		signature: ''
+	},
+	pagination: {
+		next: ''
+	}
+}
