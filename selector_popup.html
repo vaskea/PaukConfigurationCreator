@@ -5,23 +5,78 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- <script src="./vendor/jquery-3.3.1.slim.min.js"></script> -->
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <script src="./vendor/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/custom.css">
+    
+    
+    <!-- <script src="./vendor/popper.min.js"></script> -->
+    
 
     <title>Pauk Configuration Creator</title>
   </head>
-  <body>
-    <div id="tabs-container">
-        <ul class="tabs-menu">
-            <li class="current"><a href="#tab-1">Thread list</a></li>
-            <li><a href="#tab-2">Post list</a></li>
-        </ul>
-    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./vendor/jquery-3.3.1.slim.min.js"></script>
-    <script src="./vendor/popper.min.js"></script>
-    <script src="./vendor/bootstrap.min.js"></script>
+  <body>
+
+      <ul class="nav nav-tabs md-tabs" id="myTabMD" role="tablist">
+
+          <li class="nav-item">
+            <a class="nav-link active" id="threads-tab-md" data-toggle="tab" href="#threads" role="tab" aria-controls="threads"
+              aria-selected="true">Thread List</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" id="posts-tab-md" data-toggle="tab" href="#posts" role="tab" aria-controls="posts"
+              aria-selected="false">Post List</a>
+          </li>
+        </ul>
+
+        <div class="tab-content card pt-5" id="dataContent">
+
+          <div class="tab-pane fade show active" id="threads" role="tabpanel" aria-labelledby="home-tab-md">
+
+              <div class="form-group">
+                <label for="threadUrl">Thread URL</label>
+                <input type="text" class="form-control" id="threadUrl" placeholder="Thread URL" title="Thread URL CSS Selector">
+              </div>
+              <div class="form-group">
+                <label for="threadTitle">Thread Title</label>
+                <input type="text" class="form-control" id="threadTitle" placeholder="Thread Title" title="Thread Title CSS Selector">
+              </div>
+              <div class="form-group">
+                <label for="lastPostDate">Last Post Date</label>
+                <input type="text" class="form-control" id="lastPostDate" placeholder="Last Post Date" title="Last Post Date CSS Selector">
+              </div>
+              <div class="form-group">
+                <label for="firstPostDate">First Post Date</label>
+                <input type="text" class="form-control" id="firstPostDate" placeholder="First Post Date" title="First Post Date CSS Selector">
+              </div>
+              <div class="form-group">
+                <label for="repliesCount">Replies count</label>
+                <input type="text" class="form-control" id="repliesCount" placeholder="Replies Count" title="replies Count CSS Selector">
+              </div>
+
+              <div class="container mb-2 text-center">
+                  <button type="button" class="btn btn-primary">Generate Pauk Configuration</button>
+              </div>
+              
+
+          </div>
+
+          <div class="tab-pane fade" id="posts" role="tabpanel" aria-labelledby="profile-tab-md">
+            <p>Post list selectors</p>
+          </div>
+
+        </div>
+
+
   </body>
+
+  
+
 </html>

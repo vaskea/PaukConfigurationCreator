@@ -1,6 +1,7 @@
 {
     "name": "Pauk Configuration Creator",
     "version": "1.0.0",
+    "content_security_policy": "script-src 'self' http://localhost; object-src 'self'",
     "description": "This will enable users to create configuration files for Pauk Crawling System by cliking on HTML elements",
     "manifest_version": 2,
     "background": {

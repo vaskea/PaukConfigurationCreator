@@ -12,7 +12,13 @@ window.onload = () => {
         console.log('selector', selector);
         console.log('event target', element);
 
-        alert('SELECTOR: \n' + selector + '\n HTML element: \n' + JSON.stringify(element.outerHTML));
+        //alert('SELECTOR: \n' + selector + '\n HTML element: \n' + JSON.stringify(element.outerHTML));
+
+        chrome.runtime.sendMessage({
+          data: selector
+        }, function (response) {
+          console.log('Popup responded with', response)
+        });
 
     })
     

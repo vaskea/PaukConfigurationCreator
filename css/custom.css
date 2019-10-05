@@ -1,0 +1,8 @@
+.form-group {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.pt-5, .py-5 {
+    padding-top: 1rem!important;
+}
