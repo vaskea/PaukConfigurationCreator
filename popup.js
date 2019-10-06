@@ -3,27 +3,29 @@ const elements = {
     threadTitle: 'threadTitle',
     lastPostDate: 'lastPostDate',
     firstPostDate: 'firstPostDate',
-    repliesCount: 'repliesCount'
+    repliesCount: 'repliesCount',
+    threadListNP: 'threadListNP'
 }
 
 let currentlySelectedElement = elements.threadUrl;
 
 $(document).ready(function() {
 
-    
-    const threadUrl = document.getElementById('threadUrl');
+    Object.keys(elements).forEach(el => {
 
-    threadUrl.addEventListener('focus', () => {
-        console.log('focused');
-    });
+        const htmlElement = document.getElementById(el);
+
+        htmlElement.addEventListener('focus', () => {
+            currentlySelectedElement = el;
+        });
+    })
+
 
 });
 
 
-
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-    console.log('received from content', message);
-    console.log('received from content', sender);
-   
-    const currentElement = document.getElementById(currentlySelectedElement).value = message.data;
+
+    document.getElementById(currentlySelectedElement).value = message.data;
+
 });
