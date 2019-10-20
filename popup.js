@@ -4,7 +4,16 @@ const elements = {
     lastPostDate: 'lastPostDate',
     firstPostDate: 'firstPostDate',
     repliesCount: 'repliesCount',
-    threadListNP: 'threadListNP'
+    threadListNP: 'threadListNP',
+    author: 'author',
+    authorUrl: 'authorUrl',
+    avatarUrl: 'avatarUrl',
+    postdate: 'postdate',
+    postTitle: 'postTitle',
+    postbody: 'postbody',
+    html: 'html',
+	signature: 'signature',
+    postListNp: 'postListNp'
 };
 
 const lockedStatus = {
@@ -13,7 +22,16 @@ const lockedStatus = {
     lastPostDate: false,
     firstPostDate: false,
     repliesCount: false,
-    threadListNP: false
+    threadListNP: false,
+    author: false,
+    authorUrl: false,
+    avatarUrl: false,
+    postdate: false,
+    postTitle: false,
+    postbody: false,
+    html: false,
+	signature: false,
+    postListNp: false
 }
 
 let currentlySelectedElement = elements.threadUrl;
@@ -44,7 +62,7 @@ function toggleLockButton(element, elementButton) {
     lockedStatus[element] = !lockedStatus[element];
     elementButton.className === "btn btn-success lock-button" ? elementButton.className = "btn btn-danger lock-button" : elementButton.className = "btn btn-success lock-button";
     elementButton.innerText === 'Lock' ? elementButton.innerText = 'Unlock' : elementButton.innerText = 'Lock';
-    
+
 }
 
 
